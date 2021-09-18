@@ -6,11 +6,8 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import tensorflow as tf
-import string
-import re
 # import redis
 # from flask import Flask
-import unicodedata
 import streamlit as sl
 import streamlit.components.v1 as components
 from tensorflow import keras
@@ -54,7 +51,7 @@ file = open(r"holla.txt", 'r', encoding='utf-8')
 corpus = [line for line in file]
 
 #Data 
-corpus[0:10]
+corpus[50:60]
 
 
 col5,col6 = sl.columns((1,1))
@@ -74,12 +71,19 @@ Localization: Primarily meant for usage in the field of law/judiciary.
 
 sl.write('''
     # Model
-   We a re using Bi-Directional LSTM ... <text here>
 
 ''')
-
-
-
+col12, col13 = sl.columns((1,1))
+col12.write('''
+    This is a sequence to sequence model which basically is a method of encoder - decoder based language processing model that maps a fixed - length inpiut with a fixed length output where the length of the input and the output may differ. 
+''')
+col12.text("")
+col12.text("")
+col12.text("")
+img111 = Image.open("modelencdec.png")
+col12.image(img111, use_column_width = True)
+img3 = Image.open("flow.png")
+col13.image(img3, use_column_width=True)
 
 
 #Function to pre-process the data
@@ -117,9 +121,6 @@ def generate_dataset():
             output.append(data)
     df = pd.DataFrame(output, columns=['input','output'])
     return output, df 
-
-
-# In[5]:
 
 
 class LanguageIndex():
@@ -242,11 +243,33 @@ col3.header('Model Summary')
 img6 = Image.open("msumm.png")
 col3.image(img6, use_column_width=True)
 
-col4.header("Model Metrics")
+
+
+col10,col11 = sl.columns(2)
+col10.header("Model Metrics - Accuracy")
 img3 = Image.open("macc.png")
 img4 = Image.open("mloss.png")
-col4.image(img3, use_column_width=True)
-col4.image(img4, use_column_width=True)
+col10.image(img3, use_column_width=True)
+col11.header("Model Metrics - Loss")
+col11.image(img4, use_column_width=True)
+
+sl.write('''
+To Evaluate our model, we are using "Rouge Score" i.e. 
+**"Recall Oriented Understudy Gist Evaluation".**
+
+ROUGE is a set of metrics rather than just one. ROUGE-N measures the number of matching n-grams between our model-generated text and a 'reference'. 
+
+Similarly, for ROUGE-1 we would be measuring the match rate of unigrams between our model output reference. 
+
+ROUGE-2 and ROUGE-3 would use bigrams and trigrams respectively. 
+
+ROUGE-L Measures the long common subsequence (LCS) between our model output and the 'reference. 
+
+Each of these provides the 'Recall', 'Precision' and 'F1' score.
+
+We are using ROUGE-1, ROUGE-2 and ROUGE-L in particular.
+
+''')
 
 
 
@@ -265,12 +288,12 @@ earlyStop=EarlyStopping(monitor="val_loss",verbose=2,mode='min',patience=1)
 
 
 
-history = model.fit([input_data, teacher_data],target_data,
-                 batch_size= BATCH_SIZE,
-                 epochs=2,
-                 validation_split=0.2,
-                 steps_per_epoch = 100,
-                 callbacks = [earlyStop])
+# history = model.fit([input_data, teacher_data],target_data,
+#                  batch_size= BATCH_SIZE,
+#                  epochs=1,
+#                  validation_split=0.2,
+#                  steps_per_epoch = 100,
+#                  callbacks = [earlyStop])
 
 
 
@@ -372,4 +395,4 @@ results_df.head(len(test))
 
 sl.write(results_df)
 
-sl.progress(int)
+
