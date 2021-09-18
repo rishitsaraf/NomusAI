@@ -288,12 +288,12 @@ earlyStop=EarlyStopping(monitor="val_loss",verbose=2,mode='min',patience=1)
 
 
 
-# history = model.fit([input_data, teacher_data],target_data,
-#                  batch_size= BATCH_SIZE,
-#                  epochs=1,
-#                  validation_split=0.2,
-#                  steps_per_epoch = 100,
-#                  callbacks = [earlyStop])
+history = model.fit([input_data, teacher_data],target_data,
+                 batch_size= BATCH_SIZE,
+                 epochs=2,
+                 validation_split=0.2,
+                 steps_per_epoch = 100,
+                 callbacks = [earlyStop])
 
 
 
