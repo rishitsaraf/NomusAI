@@ -1,12 +1,8 @@
-Sure! Here is an expanded version of the README content for Nomus AI, including more details about the project and an updated roadmap:
-
----
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/yourusername/nomus-ai">
-    <img src="images/logo.jpeg" alt="Logo" width="80" height="80">
+    <img src="images/banner.png">
   </a>
 
   <h3 align="center">Nomus AI - A Technology Powered Autocompletion Tool</h3>
