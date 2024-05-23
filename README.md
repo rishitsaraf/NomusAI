@@ -115,15 +115,3 @@ Your Name - [@rishitsaraf](https://github.com/rishitsaraf) - rishitsaraf24@gmail
 
 <p align="right">(<a href="#table-of-contents">back to top</a>)</p>
 
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-- [Deep learning with long short-term memory networks for financial market predictions](https://doi.org/10.21314/JOR.2018.369) by Thomas Fischer and Christopher Krauss
-- [Long Short-Term Memory Neural Network for Financial Time Series](https://www.ijcaonline.org/archives/volume181/number45/fjellstroem-2018-ijca-917561.pdf) by Carmina Fjellström
-- [Using Market News Sentiment Analysis for Stock Market Prediction](https://www.mdpi.com/2227-7390/10/22/4255) by Marian Pompiliu Cristescu et al.
-- [Robo-advisor using genetic algorithm and BERT sentiments from tweets for hybrid portfolio optimization](https://doi.org/10.1016/j.eswa.2021.115060) by Edmund Kwong Wei Leow et al.
-- [The Black-Litterman Approach: Original Model and Extensions](https://ssrn.com/abstract=1117574) by Attilio Meucci
-
-<p align="right">(<a href="#table-of-contents">back to top</a>)</p>
-
----
