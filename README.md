@@ -105,12 +105,12 @@ streamlit run nomus.py
   - [ ] Advanced NLP features
   - [ ] Multi-language support
 
-<p align="right">(<a href="#table-of-contents">back to top</a>)</p>
+
 
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@yourusername](https://twitter.com/yourusername) - youremail@example.com
+Your Name - [@rishitsaraf](https://github.com/rishitsaraf) - rishitsaraf24@gmail.com
 
 
 <p align="right">(<a href="#table-of-contents">back to top</a>)</p>
